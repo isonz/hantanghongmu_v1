@@ -32,43 +32,19 @@ DD_belatedPNG.fix('*');
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="alternate" type="application/rss+xml" title="生活方式 &raquo; Feed" href="/feed/" />
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
-<!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
-<![endif]-->
-<?php if (defined("IS_MOBILE")):?>
-<link rel='stylesheet' id='twentytwelve-style-css'  href='<?php echo get_template_directory_uri(); ?>/phonestyle.css' type='text/css' media='all' />
-<?php else: ?>
 <link rel='stylesheet' id='twentytwelve-style-css'  href='<?php echo get_template_directory_uri(); ?>/style.css?ver=3.8.1' type='text/css' media='all' />
-<?php endif ?>
-
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-mobile.detect.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/default.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/iebug.js"></script>
-
+<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 </head>
 
 <body>   
 <!--header area-->
 <header>
 	<div class="header_bg"></div>
-    <div class="headerdiv clearfix">
-    	<!--login area-->
-    	<!-- 
-    	<div class="login_reg">
-        	<a href="#" class="login" title="会员登录">会员登录</a>
-            <a href="#" class="reg" title="注册成为会员">注册成为会员</a>
-        </div>
-        -->
-        <!--login area end-->
-        <!--language area-->
-        <!-- 
-        <div class="language">
-        	 <a href="#">中文</a><a href="#" class="hover">ENG</a>
-        </div>
-        -->
-        <!--language area end-->
-        
+    <div class="headerdiv clearfix">        
         <div class="logo_area">
         	<a href="/" class="logo"></a>
             <a href="http://about.ptp.cn/" class="top_menu" target="_blank">帕斯婷企业</a>
