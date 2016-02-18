@@ -33,6 +33,7 @@ DD_belatedPNG.fix('*');
 <link rel="alternate" type="application/rss+xml" title="生活方式 &raquo; Feed" href="/feed/" />
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <link rel='stylesheet' id='twentytwelve-style-css'  href='<?php echo get_template_directory_uri(); ?>/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='<?php echo get_template_directory_uri(); ?>/css/default.css' type='text/css' />
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-mobile.detect.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/default.js"></script>
@@ -42,36 +43,38 @@ DD_belatedPNG.fix('*');
 
 <body>   
 <!--header area-->
-<header>
-	<div class="header_bg"></div>
-    <div class="headerdiv clearfix">        
-        <div class="logo_area">
-        	<a href="/" class="logo"></a>
-            <a href="http://about.ptp.cn/" class="top_menu" target="_blank">帕斯婷企业</a>
-            <a href="http://skin.ptp.cn/" class="top_menu" target="_blank">医学美容</a>
-            <a href="http://mall.ptp.cn/" class="top_menu" style="width:36%;" target="_blank">帕斯婷网上商城</a>
-        </div>
-    </div>
-</header>
+<div id="header">
+	<div class="pagewidth">
+	  <div class="pmain">
+	  	<div class="ttop clearfix">
+	  		<a class="language clearfix" href="##"><div class="word">中文</div><div class="icon"></div></a>
+	  		<a class="newsletter" href="##">订阅电子通讯</a>
+	  	</div>
+	  	<div class="logomenu clearfix">
+		    <a class="logo" href="/" title="首页" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/images/logo2.png" width="80" alt="首页" /></a>
+		    <div id="main-menu" class="navigation">
+		        <ul id="main-menu-links" class="links clearfix">
+		        	<li class="menu first"><a href="/" class="active"></a></li>
+					<li class="menu"><a href="/about" title="">关于瀚唐</a></li>
+					<li class="menu"><a href="/products" title="">产品服务</a></li>
+					<li class="menu last"><a href="/recommend" title="">联系我们</a></li>
+				</ul>	      
+			</div><!-- /#main-menu -->
+		</div>
+		<div id="headerline"></div>
+	  </div>
+	</div>
+	<div id="banners">
+		<img src="<?php echo get_template_directory_uri(); ?>/images/banner/b1.jpg" class="first" />
+		<img src="<?php echo get_template_directory_uri(); ?>/images/banner/b2.jpg" />
+		<img src="<?php echo get_template_directory_uri(); ?>/images/banner/b3.jpg" />
+		<img src="<?php echo get_template_directory_uri(); ?>/images/banner/b4.jpg" />
+		<img src="<?php echo get_template_directory_uri(); ?>/images/banner/b5.jpg" />
+		<img src="<?php echo get_template_directory_uri(); ?>/images/banner/b6.jpg" />
+	</div>
+</div>
 <!--header area end-->
-<!--menu area-->
-<nav>
-	<div class="nav_menu">
-    	<a href="http://www.ptp.cn/" class="home" title="首页">首页</a>
-        <div class="menudiv clearfix">
-        	<div class="catemenu">菜单列表</div>
-        	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-        </div>
-        
-        <!--<div class="search_p clearfix">
-        	<div class="search_bg"><input name="" type="text"></div>
-            <input name="" type="submit" class="search_sub" value=" ">
-        </div>-->
-    </div>
-</nav>
-<!--menu area end-->
-<div class="center_alldiv">
-<div class="center_divpotion"></div>
+<div id="content" class="clearfix">
 
 
 
