@@ -15,7 +15,7 @@
 #banners{height:456px; width:100%; position:relative; overflow:hidden;background:url(../images/home/bg.jpg) center center no-repeat; text-align:center;}
 #banners img{display:none; margin:0 auto;}
 #banners img.first{display:block;}
-#banners dl{ position:absolute; bottom:5px; left:80%;}
+#banners dl{ position:absolute; bottom:5px; left:50%;}
 #banners dl dt{float: left;display: block;width: 18px;height: 18px;margin-left: 5px;background: url(../images/comm/change_icon.png) -18px 0 no-repeat;cursor: pointer;}
 #banners dl dt.hover {background: url(../images/comm/change_icon.png) 0 0 no-repeat;}
 
