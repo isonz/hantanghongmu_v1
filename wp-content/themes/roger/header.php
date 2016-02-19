@@ -68,6 +68,7 @@ DD_belatedPNG.fix('*');
 		<div id="headerline"></div>
 	  </div>
 	</div>
+	<img src="<?php echo get_template_directory_uri(); ?>/images/icon_s.jpg" style="display: none;" />
 	<div id="banners">
 		<img src="<?php echo get_template_directory_uri(); ?>/images/banner/b1.jpg" class="first" />
 		<img src="<?php echo get_template_directory_uri(); ?>/images/banner/b2.jpg" />
