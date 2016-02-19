@@ -570,7 +570,7 @@ function the_first_product_image($echo=true, $more_link_text = null, $strip_teas
 {
 	$content = get_the_content( $more_link_text, $strip_teaser );
 	preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content,$matches ,PREG_SET_ORDER);
-	$img = isset($matches[1][0]) ? $matches[1][0] : '';
+	$img = isset($matches[2][0]) ? $matches[2][0] : '';
 	if($echo){
 		echo $img;
 	}else{
