@@ -54,9 +54,9 @@ get_header(); ?>
 <div class="title">联系我们</div>
 <div class="cont">
 	地址：广东省江门市新会大泽镇瀚唐古典家具厂<br>
-	联系电话：<img class="alignnone size-full wp-image-231" alt="tel" src="http://127.0.0.70/wp-content/uploads/2016/02/tel.png" width="200" height="30"><br>
-	微信扫一扫添加联系人
-	
+	联系电话：<img alt="tel" src="http://www.hantanghongmu.com/wp-content/uploads/2016/02/tel.png" /><br>
+	微信扫一扫添加联系人<br>
+	<img src="http://www.hantanghongmu.com/wp-content/uploads/2016/02/weixin.jpg" alt="weixin" /><br>
 </div>
 </div>
 
