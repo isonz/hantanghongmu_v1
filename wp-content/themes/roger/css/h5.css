@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* --------------- Header ------------ */
-.pagewidth{width:100%; margin:0 auto; position:relative;}
+.pagewidth{width:90%; margin:0 auto; position:relative;}
 #header{position:relative; width:100%; color:#fff;}
 #header .pmain{position:absolute; z-index:1; width:100%;}
 #header .pmain .ttop{width:100%; padding:25px 0 5px 0;}
@@ -100,7 +100,7 @@
 #pagecontent{width:90%; margin:30px auto; line-height:30px; text-align:center;}
 #pagecontent nav{display:none;}
 #pagecontent p{text-align:left; width:90%; margin:0 auto; font-size:16px;}
-#pagecontent img{max-width:1280px;}
+#pagecontent img{max-width:100%;}
 #pagecontent p img{vertical-align:middle;}
 
 .product-list-box{border:1px #ccc solid; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:10px; padding:5px; text-align:center; width:300px; float:left; margin:20px;}

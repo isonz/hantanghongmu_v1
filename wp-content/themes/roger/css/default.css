@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* --------------- Header ------------ */
-.pagewidth{width:100%; margin:0 auto; position:relative;}
+.pagewidth{width:1280px; margin:0 auto; position:relative;}
 #header{position:relative; width:100%; color:#fff;}
 #header .pmain{position:absolute; z-index:1; width:100%;}
 #header .pmain .ttop{width:100%; padding:25px 0 5px 0;}
@@ -33,6 +33,7 @@
 /* --------------- Content ------------ */
 #content{min-height:500px; position:relative;}
 #content header.entry-header{display:none;}
+#pagecontent header.entry-header{display:block;}
 #content .homecates{background:url(../images/comm/showdor.png) top center no-repeat; min-height:200px; border-top:1px solid #a92a6f; position:relative;}
 #content .homecates .title{width:220px; background-color:#a40b5e; color:#fff; font-size:18px; line-height:40px; text-align:center; position:absolute; z-index:0; top:-40px; left:50%; margin-left:-110px;}
 #content .homecates .zaiyao{margin:0 auto; text-align:center;}
