@@ -33,7 +33,11 @@ DD_belatedPNG.fix('*');
 <link rel="alternate" type="application/rss+xml" title="生活方式 &raquo; Feed" href="/feed/" />
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <link rel='stylesheet' id='twentytwelve-style-css'  href='<?php echo get_template_directory_uri(); ?>/style.css?ver=3.8.1' type='text/css' media='all' />
+<?php if (defined("IS_MOBILE")):?>
+<link rel='stylesheet' id='twentytwelve-style-css'  href='<?php echo get_template_directory_uri(); ?>/css/h5.css' type='text/css' />
+<?php else: ?>
 <link rel='stylesheet' id='twentytwelve-style-css'  href='<?php echo get_template_directory_uri(); ?>/css/default.css' type='text/css' />
+<?php endif ?>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-mobile.detect.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/default.js"></script>
@@ -55,9 +59,9 @@ DD_belatedPNG.fix('*');
 		    <div id="main-menu" class="navigation">
 		        <ul id="main-menu-links" class="links clearfix">
 		        	<li class="menu first"><a href="/" class="active"></a></li>
-					<li class="menu"><a href="/about" title="">关于瀚唐</a></li>
-					<li class="menu"><a href="/products" title="">产品服务</a></li>
-					<li class="menu last"><a href="/recommend" title="">联系我们</a></li>
+					<li class="menu"><a href="/about/" title="">关于瀚唐</a></li>
+					<li class="menu"><a href="/product/" title="">产品服务</a></li>
+					<li class="menu last"><a href="/contact-us/" title="">联系我们</a></li>
 				</ul>	      
 			</div><!-- /#main-menu -->
 		</div>

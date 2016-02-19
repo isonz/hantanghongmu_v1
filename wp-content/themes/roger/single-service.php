@@ -28,29 +28,4 @@
     </div>
 
 </div>
-
-<!--视频弹出层-->
-	<div class="uploaddiv">
-    	<div class="Topleft">
-        	<a href="javascript:;" class="close" title="关闭"></a>
-        	<div class="Topright">
-            	<div class="Topcenter"></div>
-            </div>
-        </div>
-        <div class="CenterLeft">
-        	<div class="CenterRight">
-       	    	<div id="centerVideo"></div>
-            </div>
-        </div>
-        <div class="FootLeft">
-        	<div class="FootRight">
-            	<div class="FootCenter"></div>
-            </div>
-        </div>
-    </div>
-<!--视频弹出层 end-->
-<script type="text/javascript" src="http://player.youku.com/jsapi"></script>
 <?php get_footer(); ?>
-<script>
-$("#menu-item-30").addClass("current-menu-item");
-</script>

@@ -7,11 +7,10 @@
  * @since Twenty Twelve 1.0
  */
 
-/* 
 get_header(); ?>
 
 	<div id="primary" class="site-content">
-		<div id="content" role="main">
+		<div id="pagecontent" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -33,10 +32,11 @@ get_header(); ?>
 <?php get_sidebar(); ?>
 <?php get_footer();
 
- */
+
 ?>
 
-<?php 
+<?php
+/* 
 $root_cate_id = get_category_root_id(the_category_ID(false));
 
 switch ($root_cate_id){
@@ -44,5 +44,5 @@ switch ($root_cate_id){
 		include(TEMPLATEPATH . '/single-service.php');
 		break;
 }
-
+*/
 ?>

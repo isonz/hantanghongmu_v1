@@ -538,3 +538,109 @@ add_action('init', 'coolwp_remove_open_sans_from_wp_core' );
 
 
 
+
+function the_images($echo=true, $more_link_text = null, $strip_teaser = false)
+{
+	$content = get_the_content( $more_link_text, $strip_teaser );
+	preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content,$matches ,PREG_SET_ORDER);
+	$imgs = '';
+	foreach( $matches as $matche){
+		$imgs .= $matche[0];
+	}
+	if($echo){
+		echo $imgs;
+	}else{
+		return $imgs;
+	}
+}
+
+function the_first_image($echo=true, $more_link_text = null, $strip_teaser = false)
+{
+	$content = get_the_content( $more_link_text, $strip_teaser );
+	preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content,$matches ,PREG_SET_ORDER);
+	$img = isset($matches[0][0]) ? $matches[0][0] : '';
+	if($echo){
+		echo $img;
+	}else{
+		return $img;
+	}
+}
+
+function the_first_product_image($echo=true, $more_link_text = null, $strip_teaser = false)
+{
+	$content = get_the_content( $more_link_text, $strip_teaser );
+	preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content,$matches ,PREG_SET_ORDER);
+	$img = isset($matches[1][0]) ? $matches[1][0] : '';
+	if($echo){
+		echo $img;
+	}else{
+		return $img;
+	}
+}
+
+function the_first_image_str($content, $echo=true, $id='')
+{
+	preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content,$matches ,PREG_SET_ORDER);
+	$img = isset($matches[0][0]) ? $matches[0][0] : '<img src="#" class="visaimg" id="'.$id.'">';
+	if($echo){
+		echo $img;
+	}else{
+		return $img;
+	}
+}
+
+function the_content_only($len=0, $strip_tags=true, $nl2br=true, $echo=true, $more_link_text = null, $strip_teaser = false)
+{
+	$content = get_the_content( $more_link_text, $strip_teaser );
+	$content = preg_replace("/<img.+?\/>/", "", $content);
+	$content = preg_replace("/<a.+?\/>/", "", $content);
+	if(strip_tags) $content = strip_tags($content);
+	if($len) $content = mb_substr($content, 0, $len)."..";
+	if($nl2br) $content = nl2br($content);
+	if($echo){
+		echo $content;
+	}else{
+		return $content;
+	}
+}
+
+
+function the_content_only_str($content, $len=0, $strip_tags=true, $nl2br=true, $nbsp=true, $echo=true)
+{
+	$content = preg_replace("/<img.+?\/>/", "", $content);
+	$content = preg_replace("/<a.+?\/>/", "", $content);
+
+	if($strip_tags) $content = strip_tags($content);
+	if($nbsp) $content = str_replace("&nbsp;", "", $content);
+	if($len) $content = mb_substr($content, 0, $len)."..";
+	if($nl2br){
+		$content = str_replace(array("\r\n", "\r", "\n"), "\n", $content);
+		$content = str_replace("\n\n\n", "\n", $content);
+		$content = str_replace("\n\n", "\n", $content);
+		$content = nl2br($content);
+	}
+
+	if($echo){
+		echo $content;
+	}else{
+		return $content;
+	}
+}
+
+function wt_get_category_count($input = '') {
+	global $wpdb;
+
+	if($input == '') {
+		$category = get_the_category();
+		return $category[0]->category_count;
+	}
+	elseif(is_numeric($input)) {
+		$SQL = "SELECT $wpdb->term_taxonomy.count FROM $wpdb->terms, $wpdb->term_taxonomy WHERE $wpdb->terms.term_id=$wpdb->term_taxonomy.term_id AND $wpdb->term_taxonomy.term_id=$input";
+		return $wpdb->get_var($SQL);
+	}
+	else {
+		$SQL = "SELECT $wpdb->term_taxonomy.count FROM $wpdb->terms, $wpdb->term_taxonomy WHERE $wpdb->terms.term_id=$wpdb->term_taxonomy.term_id AND $wpdb->terms.slug='$input'";
+		return $wpdb->get_var($SQL);
+	}
+}
+

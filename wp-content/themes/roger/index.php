@@ -29,16 +29,36 @@ get_header(); ?>
 <?php get_template_part( 'content', 'page' ); ?>
 <?php endwhile; // end of the loop. ?>
 
+
 <div class="about">
-<div class="title">关于瀚唐</div>
-<div class="cont">
-瀚唐红木家具有限公司，坐落于“中国红木之乡”的广东江门大泽镇，是一家集“设计”、“生产”、“研发”为一体的大型专业红木家具生产企业（红木家具厂）。公司实力雄厚，产房面积达1万多平米，拥有能工巧匠200余名。<br>
-生产设备全部采用国内一线品牌，并花巨资引进先进的木材烘干设备及国内领先的整套油漆房。硬件设施已处国内领先水平。<br>
-公司结合了中国丰厚的人文底蕴和精湛的红木制造工艺以及现代化的管理制度，产品严格按照国家行业标准质量生产，精益求精，并郑重承诺公司产品木料全部采用进口的高档纯正红木。公司产品远销全球各地，以优良的品质，新颖的款式，合理的价格深得广大新老客户的喜爱。<br>
-瀚唐本着“以品质说话　以诚信经营”的企业宗旨，传承中国文化元素，并融合了现代家具风格，不断创新进取，立志打造成国内红木家具行业的一流的品牌。
-</div>
+<div class="title">产品服务</div>
+  <div class="product-list clearfix">
+  <?php
+    $cate_id = 1;
+	query_posts("cat=$cate_id&showposts=12");
+	$wp_query->is_archive = true; 
+	$wp_query->is_home = false;
+	while (have_posts()) : the_post();
+  ?>                            
+	<div class="product-list-box">
+		<a href="<?php the_permalink(); ?>" target="_blank"><?php the_first_product_image(); ?></a>
+		<p><?php the_title(); ?></p>
+	</div>
+	<?php endwhile; ?> 
+	
+  </div>
 </div>
 
+
+<div class="about">
+<div class="title">联系我们</div>
+<div class="cont">
+	地址：广东省江门市新会大泽镇瀚唐古典家具厂<br>
+	联系电话：<img class="alignnone size-full wp-image-231" alt="tel" src="http://127.0.0.70/wp-content/uploads/2016/02/tel.png" width="200" height="30"><br>
+	微信扫一扫添加联系人
+	
+</div>
+</div>
 
 
 </div>
