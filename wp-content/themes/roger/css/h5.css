@@ -48,7 +48,8 @@
 #content .about{-webkit-border-radius:6px; -moz-border-radius:6px; border-radius:6px; border:1px #ccc solid; width:90%; margin:30px auto; position:relative; padding:10px;}
 #content .about .title{ position:absolute; z-index:2; top:-18px; left:20px; background:#fff; padding:5px 10px; font-size:16px; font-weight:bold;}
 #content .about .title a{color:#000;}
-#content .about .cont{font-size:14px; line-height:25px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+#content .about .cont{font-size:14px; line-height:25px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; padding:10px;}
+#content .p1-1 .cont{font-size:14px; line-height:25px;overflow: auto;text-overflow:none;white-space: inherit;padding:10px;}
 #content .about .cont img{vertical-align:middle;}
 
 #content .about-left-01{float:left; width:50%; margin-top:40px; position:relative;}
