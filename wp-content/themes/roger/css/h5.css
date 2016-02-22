@@ -11,19 +11,20 @@
 #header .logomenu a.logo{display:block; float:left; }
 #headerline{width:100%; background-color:#fff; padding:1px 0; margin:10px 0;}
 #aoliansf{width:124px; height:36px;background:url(../images/comm/aoliansw.png) center center no-repeat; position:absolute; z-index:2; right:0; top:79px; display:block;}
+#header .logomenu a img{width:40px;}
 
-#banners{height:456px; width:100%; position:relative; overflow:hidden;background:url(../images/home/bg.jpg) center center no-repeat; text-align:center;}
-#banners img{display:none; margin:0 auto;}
+#banners{height:160px; width:100%; position:relative; overflow:hidden;background:url(../images/home/bg.jpg) center center no-repeat; text-align:center;}
+#banners img{display:none; margin:0 auto; height:160px;}
 #banners img.first{display:block;}
 #banners dl{ position:absolute; bottom:5px; left:50%;}
 #banners dl dt{float: left;display: block;width: 18px;height: 18px;margin-left: 5px;background: url(../images/comm/change_icon.png) -18px 0 no-repeat;cursor: pointer;}
 #banners dl dt.hover {background: url(../images/comm/change_icon.png) 0 0 no-repeat;}
 
 /* --------------- Main Menu ------------ */
-#main-menu {width:100%; float:left;}
+#main-menu {float:left;}
 #main-menu-links li.first a{background:url(../images/comm/home.png) center center no-repeat; display:block; width:32px; height:24px;}
-#main-menu-links {font-size: 0.929em; margin-top: 40px;  padding: 0;}
-#main-menu-links li {float: left;   list-style: none;  padding: 0 1px;  margin: 0 17px;  font-size:14px;  padding-top: 5px;}
+#main-menu-links {font-size: 0.929em; padding: 0;}
+#main-menu-links li {float: left;   list-style: none;  padding: 0 1px;  margin: 0 10px;  font-size:14px;  padding-top: 5px;}
 #main-menu-links li.last {margin:0 0 0 17px;}
 #main-menu-links a {color: #fff; font-size:16px; font-weight:bolder;}
 #main-menu-links a.active{color: #c16195;}

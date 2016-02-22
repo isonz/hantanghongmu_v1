@@ -58,7 +58,6 @@ DD_belatedPNG.fix('*');
 		    <a class="logo" href="/" title="首页" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/images/logo2.png" width="80" alt="首页" /></a>
 		    <div id="main-menu" class="navigation">
 		        <ul id="main-menu-links" class="links clearfix">
-		        	<li class="menu first"><a href="/" class="active"></a></li>
 					<li class="menu"><a href="/about/" title="">关于瀚唐</a></li>
 					<li class="menu"><a href="/product/" title="">产品服务</a></li>
 					<li class="menu last"><a href="/contact-us/" title="">联系我们</a></li>
