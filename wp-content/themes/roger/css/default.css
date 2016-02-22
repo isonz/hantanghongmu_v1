@@ -46,6 +46,7 @@
 
 #content .about{-webkit-border-radius:6px; -moz-border-radius:6px; border-radius:6px; border:1px #ccc solid; width:90%; margin:30px auto; position:relative; padding:20px;}
 #content .about .title{ position:absolute; z-index:2; top:-18px; left:20px; background:#fff; padding:5px 10px; font-size:16px; font-weight:bold;}
+#content .about .title a{color:#000;}
 #content .about .cont{font-size:14px; line-height:25px;}
 #content .about .cont img{vertical-align:middle;}
 
